@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO METAS -->
+    <title>Susana Freire | Century 21 - Consultora Imobiliária</title>
+    <meta name="description" content="Da primeira decisão à escritura, trato de tudo para que não tenha de tratar de nada.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SCHEMA.ORG PARA AGENTE IMOBILIÁRIO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Susana Freire",
+        "image": "https://ik.imagekit.io/ij9blp5q7/Foto%20Su.jpeg",
+        "telephone": "+351962323123",
+        "email": "susanafreire@century21.pt",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Padre Américo, 29 B",
+            "addressLocality": "Lisboa",
+            "postalCode": "1600-864",
+            "addressCountry": "PT"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Century 21"
+        },
+        "knowsAbout": ["Compra de imóveis", "Venda de imóveis", "Investimento imobiliário"],
+        "description": "Da primeira decisão à escritura, trato de tudo para que não tenha de tratar de nada."
+    }
+    </script>
+
+    <!-- FONTS E CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+    <style>
+        /* ===== ESTILOS GLOBAIS ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #111111;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* ===== ANIMAÇÕES ===== */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+        }
+        .img-zoom {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.05);
+        }
+        .gold-glow {
+            box-shadow: 0 20px 50px -15px rgba(184, 134, 11, 0.18);
+        }
+
+        /* ===== BOTÃO DOURADO PADRÃO ===== */
+        .btn-gold {
+            background-color: #B8860B;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background-color: #966d09;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -8px rgba(184, 134, 11, 0.4);
+        }
+        .btn-outline {
+            border: 1px solid #e5e7eb;
+            background: white;
+            color: #1f2937;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: #f9fafb;
+            border-color: #d1d5db;
+        }
+
+        /* ===== IMAGENS RESPONSIVAS ===== */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== SCROLL SUAVE ===== */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================ -->
+    <!-- NAVEGAÇÃO -->
+    <!-- ============================================================ -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="#" class="font-display font-bold text-xl tracking-wider uppercase text-[#111111]">
+                 Susana Freire</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase text-gray-600">
+                <a href="#imoveis" class="hover:text-[#B8860B] transition-colors">Imóveis</a>
+                <a href="#servicos" class="hover:text-[#B8860B] transition-colors">Serviços</a>
+                <a href="#testemunhos" class="hover:text-[#B8860B] transition-colors">Testemunhos</a>
+                <a href="#contacto" class="hover:text-[#B8860B] transition-colors">Contacto</a>
+            </div>
+            <a href="https://wa.me/351962323123" target="_blank" rel="noopener noreferrer" 
+               class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full btn-gold text-xs font-semibold uppercase tracking-widest shadow-md">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Quero vender
+            </a>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<header class="w-full relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-gray-50 via-white to-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+            <!-- Foto -->
+            <div class="w-full lg:w-[40%] flex justify-center relative fade-in-up">
+                <div class="absolute -inset-2 bg-gradient-to-tr from-[#B8860B]/20 to-transparent rounded-[32px] blur-2xl opacity-60"></div>
+                <div class="relative group w-full max-w-sm lg:max-w-none">
+                    <div class="p-1.5 rounded-[28px] bg-gradient-to-b from-[#B8860B]/40 via-[#B8860B]/10 to-transparent gold-glow">
+                        <img src="https://ik.imagekit.io/ij9blp5q7/Foto%20Su.jpeg"
+                             alt="Susana Freire, consultora imobiliária"
+                             width="540" height="540"
+                             class="w-full h-[400px] lg:h-[480px] object-contain object-center rounded-[24px] bg-white border border-white"
+                             loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+
+                <!-- Conteúdo -->
+                <div class="w-full lg:w-[60%] text-center lg:text-left space-y-6 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#B8860B]/10 border border-[#B8860B]/20 text-[#B8860B] text-xs font-semibold uppercase tracking-widest">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#B8860B]"></span> Consultora Imobiliária
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-[1.15]">
+                        Susana Freire</span>
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl font-light text-gray-700 tracking-tight font-display italic">
+                       Da primeira decisão à escritura, trato de tudo para que não tenha de tratar de nada.
+                    </p>
+
+                    <p class="text-base sm:text-lg text-gray-600 max-w-2xl leading-relaxed">
+                        Vender casas não é o mesmo que mostrar casas.
+
+É um trabalho que exige estratégia, proximidade e uma vontade genuína de tornar simples aquilo que, para o cliente, pode parecer complicado.
+
+Da primeira decisão ao final do processo, faço o caminho consigo.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/351962323123" target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full btn-gold shadow-lg text-sm font-bold tracking-wide">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Falar no WhatsApp
+                        </a>
+                        <a href="#imoveis"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full btn-outline text-sm font-semibold shadow-sm">
+                            Ver Imóveis
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- ============================================================ -->
+    <!-- IMÓVEIS EM DESTAQUE -->
+    <!-- ============================================================ -->
+    <main id="imoveis" class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-20">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs font-semibold uppercase tracking-widest text-[#B8860B]">Oportunidades Exclusivas</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Imóveis em Destaque</h2>
+            <div class="w-12 h-0.5 bg-[#B8860B] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <!-- IMÓVEL 1 -->
+            <article class="group rounded-2xl overflow-hidden bg-white border border-gray-100 card-hover">
+                <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
+                    <img src="https://ik.imagekit.io/ij9blp5q7/1RPA_8780.jpg"
+                         alt="Apartamento T1 renovado em São João da Talha"
+                         width="800" height="450"
+                         class="w-full h-full object-cover img-zoom"
+                         loading="lazy" decoding="async">
+                    <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-full uppercase tracking-wider font-medium">
+                        Disponível
+                    </div>
+                </div>
+                <div class="p-8">
+                    <p class="text-xs uppercase font-semibold text-[#B8860B] tracking-wider">São João da Talha, Loures</p>
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mt-1">Apartamento T1 Renovado</h3>
+                    <p class="font-display text-2xl font-bold text-[#B8860B] mt-2">€ 275.000</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mt-3">Totalmente remodelado com acabamentos de qualidade, mobilado e muita luz natural.</p>
+
+                    <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-3">
+                        <a href="https://century21.pt/comprar/C0246-03562" target="_blank"
+                           class="flex-1 px-5 py-3 rounded-lg btn-gold text-sm font-medium text-center shadow-sm">
+                            Ver imóvel
+                        </a>
+                        <a href="#contacto"
+                           class="flex-1 px-5 py-3 rounded-lg btn-outline text-sm font-medium text-center">
+                            Pedir informações
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- ÚLTIMOS IMÓVEIS VENDIDOS -->
+    <!-- ============================================================ -->
+    <section class="w-full bg-gray-50 py-20 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-[#B8860B]">Resultados</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Últimos Imóveis Vendidos</h2>
+                <p class="text-gray-600 text-sm mt-2">Negócios concretizados com sucesso e clientes satisfeitos.</p>
+                <div class="w-12 h-0.5 bg-[#B8860B] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <article class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm card-hover relative">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="https://ik.imagekit.io/ij9blp5q7/Fachada%20Reserva%20Bot%C3%A2nica.png"
+                             alt="Apartamento vendido na Rinchoa"
+                             width="600" height="338"
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                             loading="lazy" decoding="async">
+                        <div class="absolute top-4 right-4 bg-gradient-to-r from-[#B8860B] to-[#966d09] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg tracking-widest uppercase">
+                            Vendido
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs uppercase font-semibold text-gray-400">Rinchoa</p>
+                        <h3 class="font-display text-lg font-bold text-gray-900 mt-1">Apartamento T3 em Fitares</h3>
+                        <p class="text-xs text-gray-500 mt-2">Vendido por videochamada.</p>
+                    </div>
+                </article>
+
+                <article class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm card-hover relative">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="https://ik.imagekit.io/ij9blp5q7/Moradia.jpg"
+                             alt="Moradia vendida em Mem-Martins"
+                             width="600" height="338"
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                             loading="lazy" decoding="async">
+                        <div class="absolute top-4 right-4 bg-gradient-to-r from-[#B8860B] to-[#966d09] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg tracking-widest uppercase">
+                            Vendido
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs uppercase font-semibold text-gray-400">Mem-Martins, Sintra</p>
+                        <h3 class="font-display text-lg font-bold text-gray-900 mt-1">Moradia com Quintal e Piscina</h3>
+                        <p class="text-xs text-gray-500 mt-2">A casa nova de uma família feliz.</p>
+                    </div>
+                </article>
+
+                <article class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm card-hover relative">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="https://ik.imagekit.io/ij9blp5q7/8.jpg"
+                             alt="T2 remodelado vendido em Monte-Abraão"
+                             width="600" height="338"
+                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                             loading="lazy" decoding="async">
+                        <div class="absolute top-4 right-4 bg-gradient-to-r from-[#B8860B] to-[#966d09] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg tracking-widest uppercase">
+                            Vendido
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs uppercase font-semibold text-gray-400">Monte-Abraão, Sintra</p>
+                        <h3 class="font-display text-lg font-bold text-gray-900 mt-1">T2 Remodelado</h3>
+                        <p class="text-xs text-gray-500 mt-2">Processo tratado com todas as diligências.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SERVIÇOS (porquê escolher-me) -->
+    <!-- ============================================================ -->
+    <section id="servicos" class="w-full py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-[#B8860B]">Valor &amp; Diferenciação</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Porquê Escolher-me</h2>
+                <div class="w-12 h-0.5 bg-[#B8860B] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="p-8 rounded-2xl bg-gray-50/60 border border-gray-100 card-hover space-y-4 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-xl bg-[#B8860B]/10 flex items-center justify-center text-[#B8860B] mx-auto sm:mx-0">
+                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-gray-900">Atendimento Personalizado</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Acompanhamento dedicado em cada fase, focado nos teus objetivos reais.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gray-50/60 border border-gray-100 card-hover space-y-4 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-xl bg-[#B8860B]/10 flex items-center justify-center text-[#B8860B] mx-auto sm:mx-0">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-gray-900">Conhecimento do Mercado</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Análises rigorosas para garantir o valor justo e o melhor retorno.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gray-50/60 border border-gray-100 card-hover space-y-4 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-xl bg-[#B8860B]/10 flex items-center justify-center text-[#B8860B] mx-auto sm:mx-0">
+                        <i data-lucide="camera" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-gray-900">Marketing Profissional</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Fotografia de alta definição e promoção direcionada aos compradores certos.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gray-50/60 border border-gray-100 card-hover space-y-4 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-xl bg-[#B8860B]/10 flex items-center justify-center text-[#B8860B] mx-auto sm:mx-0">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-gray-900">Acompanhamento Completo</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Apoio jurídico, burocrático e financeiro até à escritura.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TESTEMUNHOS -->
+    <!-- ============================================================ -->
+    <section id="testemunhos" class="w-full py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[#B8860B]/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-[#B8860B]">Confiança</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2">O que dizem os meus clientes</h2>
+                <div class="w-12 h-0.5 bg-[#B8860B] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <blockquote class="p-8 rounded-2xl bg-gray-800/60 border border-gray-700/50 space-y-4 backdrop-blur-sm">
+                    <div class="flex text-[#B8860B] gap-1">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic">"A Susana tratou da venda do nosso apartamento com profissionalismo. A tranquilidade que nos transmitiu em todo o processo não tem preço."</p>
+                    <footer class="pt-4 border-t border-gray-700/50">
+                        <cite class="font-display font-bold text-sm not-italic">Dr. António M.</cite>
+                        <p class="text-xs text-gray-400">Proprietário em Lisboa</p>
+                    </footer>
+                </blockquote>
+
+                <blockquote class="p-8 rounded-2xl bg-gray-800/60 border border-gray-700/50 space-y-4 backdrop-blur-sm">
+                    <div class="flex text-[#B8860B] gap-1">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic">"Encontrar a nossa casa de sonho parecia impossível até conhecermos a Susana. Transparência, eficácia e dedicação fora do comum."</p>
+                    <footer class="pt-4 border-t border-gray-700/50">
+                        <cite class="font-display font-bold text-sm not-italic">Carolina &amp; Pedro</cite>
+                        <p class="text-xs text-gray-400">Compradores em Cascais</p>
+                    </footer>
+                </blockquote>
+
+                <blockquote class="p-8 rounded-2xl bg-gray-800/60 border border-gray-700/50 space-y-4 backdrop-blur-sm">
+                    <div class="flex text-[#B8860B] gap-1">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic">"Excelente conhecimento do mercado e da parte burocrática. Vendeu o nosso imóvel acima das expectativas em tempo recorde."</p>
+                    <footer class="pt-4 border-t border-gray-700/50">
+                        <cite class="font-display font-bold text-sm not-italic">Miguel S.</cite>
+                        <p class="text-xs text-gray-400">Investidor</p>
+                    </footer>
+                </blockquote>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+<!-- ============================================================ -->
+<!-- CONTACTO + FORMULÁRIO WHATSAPP -->
+<!-- ============================================================ -->
+<section id="contacto" class="w-full py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-semibold uppercase tracking-widest text-[#B8860B]">Fala Comigo</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Vamos Conversar?</h2>
+            <div class="w-12 h-0.5 bg-[#B8860B] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <!-- Info de contacto -->
+            <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#B8860B]/10 flex items-center justify-center text-[#B8860B] flex-shrink-0 mt-1">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Telefone</h3>
+                        <a href="tel:962323123" class="text-gray-600 hover:text-[#B8860B] transition-colors">962 323 123</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#B8860B]/10 flex items-center justify-center text-[#B8860B] flex-shrink-0 mt-1">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Email</h3>
+                        <a href="mailto:susanafreire@century21.pt" class="text-gray-600 hover:text-[#B8860B] transition-colors">susanafreire@century21.pt</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[#B8860B]/10 flex items-center justify-center text-[#B8860B] flex-shrink-0 mt-1">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Visite-nos</h3>
+                        <p class="text-gray-600">Rua Padre Américo, 29 B<br>1600-864, Telheiras</p>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <a href="https://wa.me/351962323123" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-3 px-8 py-4 rounded-full btn-gold shadow-lg text-sm font-bold tracking-wide">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- FORMULÁRIO PARA WHATSAPP -->
+            <div class="bg-gray-50/60 p-8 rounded-2xl border border-gray-100">
+                <form onsubmit="abrirWhatsapp(event)" class="space-y-6">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="O teu nome" required
+                               class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/40 focus:border-[#B8860B] transition-all bg-white">
+                    </div>
+                    <div>
+                        <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Telemóvel" required
+                               class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/40 focus:border-[#B8860B] transition-all bg-white">
+                    </div>
+                    <div>
+                        <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como posso ajudar?" required
+                                  class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/40 focus:border-[#B8860B] transition-all bg-white resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full py-4 rounded-full btn-gold text-sm font-bold tracking-wide shadow-lg">
+                        <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                        Enviar via WhatsApp
+                    </button>
+                    <p class="text-xs text-gray-400 text-center">Ao enviar, será aberta uma conversa no WhatsApp com os dados que indicou. </p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+function abrirWhatsapp(event) {
+    event.preventDefault(); // não recarrega a página
+
+    var nome = document.getElementById("nome").value;
+    var telefone = document.getElementById("telefone").value;
+    var mensagem = document.getElementById("mensagem").value;
+
+    var url = "https://wa.me/351962323123?text="
+        + "*Novo Pedido de Contacto*" + "%0a%0a"
+        + "*Nome:* " + encodeURIComponent(nome) + "%0a"
+        + "*Telefone:* " + encodeURIComponent(telefone) + "%0a"
+        + "*Mensagem:* " + encodeURIComponent(mensagem);
+
+    window.open(url, '_blank');
+}
+</script>
+
+    <!-- ============================================================ -->
+    <!-- RODAPÉ -->
+    <!-- ============================================================ -->
+    <footer class="w-full bg-[#111111] text-white py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start pb-12 border-b border-gray-800">
+
+                <div class="text-center md:text-left space-y-4">
+                    <div class="inline-flex items-center gap-3 border border-[#B8860B]/40 px-4 py-2 bg-black/40">
+                        <span class="font-display text-xl font-bold text-[#B8860B] tracking-widest">C21</span>
+                        <span class="border-l border-[#B8860B]/40 pl-3 text-xs tracking-[0.2em] uppercase font-bold text-white">Century 21</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Susana Freire · 962 323 123<br>susanafreire@century21.pt</p>
+                    <p class="text-xs text-gray-500">AMI 10025 Mediação Imobiliária unipessoal, Lda.</p>
+                </div>
+
+                <div class="text-center md:text-left space-y-3">
+                    <h3 class="font-display text-lg font-bold text-[#B8860B]">Visite-nos</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">Rua Padre Américo, 29 B<br>1600-864, Telheiras</p>
+                    <p class="text-xs text-gray-400">Loja: +351 217 105 000</p>
+                </div>
+
+                <div class="text-center md:text-left space-y-3">
+                    <h3 class="font-display text-lg font-bold text-[#B8860B]">Siga-me</h3>
+                    <nav aria-label="Redes sociais" class="flex justify-center md:justify-start gap-6">
+                        <a href="#" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-[#B8860B] transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4"></i><span>Facebook</span>
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-[#B8860B] transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4"></i><span>Instagram</span>
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-[#B8860B] transition-colors">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i><span>LinkedIn</span>
+                        </a>
+                    </nav>
+                </div>
+
+            </div>
+
+            <div class="pt-8 text-center flex flex-col sm:flex-row items-center justify-between gap-6">
+                <a href="#contacto" class="px-8 py-3 rounded-full btn-gold text-sm font-bold shadow-md">
+                    Agendar Visita
+                </a>
+                <p class="text-xs text-gray-500">
+                    © 2026 Susana Freire — Todos os direitos reservados
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- INICIALIZAÇÃO DOS ÍCONES -->
+    <!-- ============================================================ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+
+</body>
+</html>
