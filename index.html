@@ -257,8 +257,8 @@
                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full btn-gold text-[10px] font-semibold uppercase tracking-wider shadow-sm">
                 <i data-lucide="home" class="w-3.5 h-3.5"></i> Quero Saber o Valor da minha casa
             </a>
-            <a href="https://wa.me/351962323123" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full btn-gold text-[10px] font-semibold uppercase tracking-wider shadow-sm">
+            <a href="#" onclick="abrirModalVender(); return false;"
+               class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full btn-gold text-[10px] font-semibold uppercase tracking-wider shadow-sm cursor-pointer">
                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Quero vender
             </a>
         </div>
@@ -919,6 +919,159 @@ Um abraço e seguimos em contato."</p>
             }
         });
     </script>
+
+<!-- ===== MODAL: QUERO VENDER ===== -->
+<div id="modal-vender" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl">
+
+        <!-- Cabeçalho -->
+        <div class="sticky top-0 bg-white border-b border-gray-100 px-6 sm:px-8 py-5 flex items-center justify-between rounded-t-2xl">
+            <div>
+                <h3 class="font-display text-2xl font-bold text-gray-900">Quero vender o meu imóvel</h3>
+                <p class="text-xs text-gray-500 mt-1">Preencha os dados e eu entro em contacto consigo.</p>
+            </div>
+            <button type="button" onclick="fecharModalVender()" aria-label="Fechar"
+                    class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition-colors">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+        </div>
+
+        <!-- Formulário -->
+        <form id="form-vender" onsubmit="enviarVender(event)" class="p-6 sm:p-8 space-y-5">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                <div class="sm:col-span-2">
+                    <label for="v-nome" class="block text-sm font-medium text-gray-700 mb-1">Nome completo *</label>
+                    <input type="text" id="v-nome" required
+                           class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/40 focus:border-[#B8860B] transition-all bg-white">
+                </div>
+
+                <div class="sm:col-span-2">
+                    <label for="v-tipo" class="block text-sm font-medium text-gray-700 mb-1">Tipo de imóvel *</label>
+                    <select id="v-tipo" required
+                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/40 focus:border-[#B8860B] transition-all bg-white">
+                        <option value="">Selecione…</option>
+                        <option value="Apartamento">Apartamento</option>
+                        <option value="Moradia">Moradia</option>
+                        <option value="Comercial">Comercial</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="v-tipologia" class="block text-sm font-medium text-gray-700 mb-1">Tipologia *</label>
+                    <select id="v-tipologia" required
+                            class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/40 focus:border-[#B8860B] transition-all bg-white">
+                        <option value="">Selecione…</option>
+                        <option value="T0">T0</option>
+                        <option value="T1">T1</option>
+                        <option value="T2">T2</option>
+                        <option value="T3">T3</option>
+                        <option value="T4">T4</option>
+                        <option value="T5+">T5 ou superior</option>
+                        <option value="Não aplicável">Não aplicável (comercial)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="v-wc" class="block text-sm font-medium text-gray-700 mb-1">Nº de casas de banho *</label>
+                    <input type="number" id="v-wc" min="0" max="20" required
+                           class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/40 focus:border-[#B8860B] transition-all bg-white">
+                </div>
+
+                <div class="sm:col-span-2">
+                    <label for="v-morada" class="block text-sm font-medium text-gray-700 mb-1">Morada *</label>
+                    <input type="text" id="v-morada" required placeholder="Rua, número, freguesia, concelho"
+                           class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#B8860B]/40 focus:border-[#B8860B] transition-all bg-white">
+                </div>
+
+            </div>
+
+            <!-- Características (checkboxes) -->
+            <div>
+                <p class="text-sm font-medium text-gray-700 mb-3">Características (assinale o que tem)</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <label class="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-gray-200 hover:border-[#B8860B]/50 cursor-pointer transition-colors text-sm">
+                        <input type="checkbox" id="v-varanda" class="accent-[#B8860B] w-4 h-4"> Varanda
+                    </label>
+                    <label class="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-gray-200 hover:border-[#B8860B]/50 cursor-pointer transition-colors text-sm">
+                        <input type="checkbox" id="v-elevador" class="accent-[#B8860B] w-4 h-4"> Elevador
+                    </label>
+                    <label class="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-gray-200 hover:border-[#B8860B]/50 cursor-pointer transition-colors text-sm">
+                        <input type="checkbox" id="v-jardim" class="accent-[#B8860B] w-4 h-4"> Jardim
+                    </label>
+                    <label class="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-gray-200 hover:border-[#B8860B]/50 cursor-pointer transition-colors text-sm">
+                        <input type="checkbox" id="v-piscina" class="accent-[#B8860B] w-4 h-4"> Piscina
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit"
+                    class="w-full py-4 rounded-full btn-gold text-sm font-bold tracking-wide shadow-lg">
+                <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                Enviar via WhatsApp
+            </button>
+            <p class="text-xs text-gray-400 text-center">Ao enviar, será aberta uma conversa no WhatsApp com os dados preenchidos.</p>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SCRIPT DO MODAL "QUERO VENDER" -->
+<!-- ============================================================ -->
+<script>
+    function abrirModalVender() {
+        var modal = document.getElementById('modal-vender');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+    function fecharModalVender() {
+        var modal = document.getElementById('modal-vender');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('modal-vender').addEventListener('click', function(e) {
+        if (e.target === this) fecharModalVender();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') fecharModalVender();
+    });
+
+    function enviarVender(event) {
+        event.preventDefault();
+
+        var nome = document.getElementById('v-nome').value.trim();
+        var tipo = document.getElementById('v-tipo').value;
+        var tipologia = document.getElementById('v-tipologia').value;
+        var wc = document.getElementById('v-wc').value;
+        var morada = document.getElementById('v-morada').value.trim();
+
+        var extras = [];
+        if (document.getElementById('v-varanda').checked) extras.push('Varanda');
+        if (document.getElementById('v-elevador').checked) extras.push('Elevador');
+        if (document.getElementById('v-jardim').checked) extras.push('Jardim');
+        if (document.getElementById('v-piscina').checked) extras.push('Piscina');
+
+        var msg = '*Quero Vender o Meu Imóvel*%0A%0A'
+            + '*Nome:* ' + encodeURIComponent(nome) + '%0A'
+            + '*Tipo:* ' + encodeURIComponent(tipo) + '%0A'
+            + '*Tipologia:* ' + encodeURIComponent(tipologia) + '%0A'
+            + '*Nº casas de banho:* ' + encodeURIComponent(wc) + '%0A'
+            + '*Morada:* ' + encodeURIComponent(morada) + '%0A'
+            + '*Extras:* ' + encodeURIComponent(extras.length ? extras.join(', ') : 'Nenhum');
+
+        window.open('https://wa.me/351962323123?text=' + msg, '_blank');
+        fecharModalVender();
+    }
+</script>
 
 </body>
 </html>
